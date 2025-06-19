@@ -1,1 +1,1 @@
-# quarks.levon.dev
+# quarks

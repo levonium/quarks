@@ -1,3 +1,4 @@
+@import url(https://fonts.bunny.net/css?family=barlow:300,400,600,700&display=swap);
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -6,6 +7,87 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-sans:
+    'Barlow', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono:
+    'Noto Sans Mono', 'Monaco', 'Liberation Mono', 'JetBrains Mono',
+    ui-monospace, monospace;
+
+  --breakpoint-xl: initial;
+  --breakpoint-2xl: initial;
+}
+
+.content {
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  p {
+    @apply mb-4 last:mb-0;
+  }
+
+  pre {
+    @apply mt-4 mb-8 overflow-x-auto rounded-sm bg-slate-50 p-4 font-mono;
+
+    code {
+      @apply rounded-sm text-slate-600;
+    }
+  }
+
+  :not(pre) > code {
+    @apply rounded-sm border-2 border-dashed border-slate-200 bg-sky-50/50 px-2 py-0.5 text-base;
+  }
+
+  ul {
+    @apply mb-4 list-disc pl-4;
+  }
+
+  ol {
+    @apply mb-4 list-decimal pl-4;
+  }
+
+  ul li,
+  ol li {
+    @apply break-all;
+  }
+
+  a {
+    @apply text-sky-700 underline hover:text-sky-800;
+  }
+
+  img {
+    @apply mb-4 block rounded-sm;
+  }
+
+  hr {
+    @apply my-8 border-sky-100;
+  }
+
+  blockquote {
+    @apply mb-4 rounded-r-sm border-l-4 border-sky-100 bg-sky-50/50 py-1 pl-4;
+  }
 }
